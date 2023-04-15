@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "English word notebook-WinUI3 (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "English word notebook-WinUI3 (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

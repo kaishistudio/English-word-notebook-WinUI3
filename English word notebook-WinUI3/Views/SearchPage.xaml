@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="English_word_notebook_WinUI3.Views.SearchPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:behaviors="using:English_word_notebook_WinUI3.Behaviors" xmlns:models="using:English_word_notebook_WinUI3.Models"
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Margin="5" TextChanged="TextBox_TextChanged" HorizontalAlignment="Stretch"/>
+
+        <ListView x:Name="lv_apps"
+ 	Grid.Row="1" 
+	  Margin="0 5"
+            Background="Transparent"  ItemsSource="{x:Bind ViewModel.SampleItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate  x:DataType="models:Word">
+                    <StackPanel Margin="0 5">
+                        <TextBlock Text="{x:Bind word,Mode=OneWay}" TextWrapping="NoWrap" FontSize="16" FontWeight="Bold"/>
+                        <StackPanel  Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="{x:Bind shuxing,Mode=OneWay}" TextWrapping="NoWrap"  FontSize="12" FontWeight="Normal" Margin="0,0,5,0"/>
+                            <TextBlock Text="{x:Bind shiyi,Mode=OneWay}" TextWrapping="NoWrap"  FontSize="12" FontWeight="Normal" Margin="0,0,10,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

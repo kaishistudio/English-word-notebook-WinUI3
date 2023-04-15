@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="English_word_notebook_WinUI3.Views.ChartPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:behaviors="using:English_word_notebook_WinUI3.Behaviors" 
+    behaviors:NavigationViewHeaderBehavior.HeaderMode="Never"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea" Margin="10" Loaded="ContentArea_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" x:Name="g_renshi">
+            <Grid Width="40" x:Name="img_renshi" Grid.Row="0" Background="Green" VerticalAlignment="Bottom" Margin="0,0,0,30"/>
+            <TextBlock x:Uid="t_renshi" Height="30" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Grid.Column="1" x:Name="g_mohu">
+            <Grid Width="40" x:Name="img_mohu" Grid.Row="0" Background="Green" VerticalAlignment="Bottom" Margin="0,0,0,30"/>
+            <TextBlock x:Uid="t_mohu" Height="30" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Grid.Column="2" x:Name="g_wangji">
+            <Grid Width="40" x:Name="img_wangji" Grid.Row="0" Background="Green" VerticalAlignment="Bottom" Margin="0,0,0,30"/>
+            <TextBlock x:Uid="t_wangji" Height="30" VerticalAlignment="Bottom"/>
+        </Grid>
+    </Grid>
+</Page>
